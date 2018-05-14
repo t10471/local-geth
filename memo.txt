@@ -1,0 +1,17 @@
+sudo cputhrottle $(pgrep geth) 10
+
+geth --datadir testnet init genesis.json
+
+.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 123 --nodiscover --maxpeers 0 --datadir testnet --gasprice 1 console --rpc --rpcapi "eth,net,web3,personal"
+
+personal.newAccount()
+
+
+/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 123 --nodiscover --maxpeers 0 --datadir testnet --gasprice 1 --mine --minerthreads 1 --rpc --rpcapi "eth,net,web3,personal"
+
+
+geth attach ipc:testnet/geth.ipc
+
+personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[1])
+
