@@ -15,3 +15,11 @@ geth attach ipc:testnet/geth.ipc
 personal.unlockAccount(eth.accounts[0])
 personal.unlockAccount(eth.accounts[1])
 
+
+POAの起動
+geth account new --datadir poa
+puppeth --network poa
+geth --datadir poa init poa.json
+geth --datadir poa --port 3000
+geth attach ipc:poa/geth.ipc
+
