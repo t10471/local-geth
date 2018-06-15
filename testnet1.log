@@ -1,0 +1,252 @@
+INFO [06-15|21:13:05] Commit new mining work                   number=1021 txs=0 uncles=0 elapsed=200.58µs
+unconfirmedBlocks Shift
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+Seal
+Seal mine
+INFO [06-15|21:13:31] Submitted transaction                    fullhash=0xb1fca5d6346e23954cdc71f91ee930c3e88dfc59fdc1f47240a74eac9af8addd recipient=0x11A725282EE227fF2dDe2fD11055Cbe8F5961E39
+peerSet PeersWithoutTx
+worker update txsCh
+peer AsyncSendTransactions
+peer broadcast queuedTxs
+peer SendTransactions
+protoRW WriteMsg msg #2 (169 bytes)
+rlpx WriteMsg msg #18 (169 bytes)
+rlpxFrameRW WriteMsg msg #18 (169 bytes)
+Seal found
+Seal End
+INFO [06-15|21:13:35] Successfully sealed new block            number=1021 hash=4c2f0a…182c4b
+worker wait result
+BlockChain PostChainEvents ChainEvent
+peerSet PeersWithoutBlock
+peer AsyncSendNewBlock
+BlockChain PostChainEvents ChainHeadEvent
+unconfirmedBlocks Insert
+unconfirmedBlocks Shift
+worker update chainHeadCh
+worker commitNewWork
+INFO [06-15|21:13:35] 🔨 mined potential block                  number=1021 hash=4c2f0a…182c4b
+peer broadcast queuedProps
+peer SendNewBlock
+peerSet PeersWithoutBlock
+worker makeCurrent
+worker commitNewWork self.eth.TxPool().Pending
+worker commitTransactions
+worker commitTransactions commitTransaction
+Ethash Finalize
+INFO [06-15|21:13:35] Commit new mining work                   number=1022 txs=1 uncles=0 elapsed=432.673µs
+unconfirmedBlocks Shift
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+Seal
+Seal mine
+Seal found
+Seal End
+INFO [06-15|21:13:43] Successfully sealed new block            number=1022 hash=d7e471…a2e7a0
+worker wait result
+BlockChain PostChainEvents ChainEvent
+BlockChain PostChainEvents ChainHeadEvent
+peerSet PeersWithoutBlock
+peer AsyncSendNewBlock
+worker update chainHeadCh
+worker commitNewWork
+unconfirmedBlocks Insert
+unconfirmedBlocks Shift
+peerSet PeersWithoutBlock
+peer broadcast queuedProps
+peer SendNewBlock
+INFO [06-15|21:13:43] 🔨 mined potential block                  number=1022 hash=d7e471…a2e7a0
+worker makeCurrent
+worker commitNewWork self.eth.TxPool().Pending
+worker commitTransactions
+Ethash Finalize
+INFO [06-15|21:13:43] Commit new mining work                   number=1023 txs=0 uncles=0 elapsed=232.817µs
+unconfirmedBlocks Shift
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+Seal
+Seal mine
+Seal found
+Seal End
+INFO [06-15|21:13:57] Successfully sealed new block            number=1023 hash=307797…9430ea
+worker wait result
+BlockChain PostChainEvents ChainEvent
+BlockChain PostChainEvents ChainHeadEvent
+peerSet PeersWithoutBlock
+peer AsyncSendNewBlock
+unconfirmedBlocks Insert
+peer broadcast queuedProps
+peer SendNewBlock
+worker update chainHeadCh
+worker commitNewWork
+unconfirmedBlocks Shift
+peerSet PeersWithoutBlock
+INFO [06-15|21:13:57] 🔨 mined potential block                  number=1023 hash=307797…9430ea
+worker makeCurrent
+worker commitNewWork self.eth.TxPool().Pending
+worker commitTransactions
+Ethash Finalize
+INFO [06-15|21:13:57] Commit new mining work                   number=1024 txs=0 uncles=0 elapsed=224.837µs
+unconfirmedBlocks Shift
+worker push
+worker agent *miner.RemoteAgent
+worker agent *miner.CpuAgent
+worker updateSnapshot
+Seal
+Seal mine
+peer MarkBlock
+Ethash VerifyHeader
+Ethash VerifySeal
+InsertChain
+Ethash VerifyHeaders
+peerSet PeersWithoutBlock
+Ethash VerifySeal
+Ethash VerifyUncles
+Ethash VerifySeal
+Ethash Finalize
+INFO [06-15|21:14:16] Inserted new block                       number=1024 hash=4824b8…fe1c9e uncles=1 txs=0 gas=0 elapsed=8.688ms
+INFO [06-15|21:14:16] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=8.774ms   mgasps=0.000 number=1024 hash=4824b8…fe1c9e cache=5.33kB
+BlockChain PostChainEvents ChainEvent
+BlockChain PostChainEvents ChainHeadEvent
+worker update chainHeadCh
+worker commitNewWork
+peerSet PeersWithoutBlock
+worker makeCurrent
+worker commitNewWork self.eth.TxPool().Pending
+worker commitTransactions
+Ethash Finalize
+INFO [06-15|21:14:16] Commit new mining work                   number=1025 txs=0 uncles=0 elapsed=163.465µs
+unconfirmedBlocks Shift
+INFO [06-15|21:14:16] 🔗 block reached canonical chain          number=1019 hash=284b10…fbc1cc
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+Seal
+worker wait result
+Seal mine
+peer MarkBlock
+Ethash VerifyHeader
+Ethash VerifySeal
+InsertChain
+peerSet PeersWithoutBlock
+Ethash VerifyHeaders
+Ethash VerifySeal
+Ethash VerifyUncles
+Ethash Finalize
+INFO [06-15|21:14:44] Inserted new block                       number=1025 hash=ddd413…b9180f uncles=0 txs=0 gas=0 elapsed=4.876ms
+INFO [06-15|21:14:44] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.979ms   mgasps=0.000 number=1025 hash=ddd413…b9180f cache=5.99kB
+BlockChain PostChainEvents ChainEvent
+BlockChain PostChainEvents ChainHeadEvent
+worker update chainHeadCh
+worker commitNewWork
+peerSet PeersWithoutBlock
+worker makeCurrent
+worker commitNewWork self.eth.TxPool().Pending
+worker commitTransactions
+Ethash Finalize
+INFO [06-15|21:14:44] Commit new mining work                   number=1026 txs=0 uncles=0 elapsed=172.381µs
+unconfirmedBlocks Shift
+INFO [06-15|21:14:44] 🔗 block reached canonical chain          number=1020 hash=323ed4…6ce1f6
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+Seal
+Seal mine
+worker wait result
+Seal found
+Seal End
+INFO [06-15|21:14:52] Successfully sealed new block            number=1026 hash=ca8e5c…0d476f
+worker wait result
+BlockChain PostChainEvents ChainEvent
+peerSet PeersWithoutBlock
+peer AsyncSendNewBlock
+peerSet PeersWithoutBlock
+peer broadcast queuedProps
+peer SendNewBlock
+BlockChain PostChainEvents ChainHeadEvent
+unconfirmedBlocks Insert
+unconfirmedBlocks Shift
+INFO [06-15|21:14:52] 🔗 block reached canonical chain          number=1021 hash=4c2f0a…182c4b
+INFO [06-15|21:14:52] 🔨 mined potential block                  number=1026 hash=ca8e5c…0d476f
+worker update chainHeadCh
+worker commitNewWork
+worker makeCurrent
+worker commitNewWork self.eth.TxPool().Pending
+worker commitTransactions
+Ethash Finalize
+INFO [06-15|21:14:52] Commit new mining work                   number=1027 txs=0 uncles=0 elapsed=279.611µs
+unconfirmedBlocks Shift
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+Seal
+Seal mine
+peer MarkBlock
+Ethash VerifyHeader
+Ethash VerifySeal
+InsertChain
+Ethash VerifyHeaders
+peerSet PeersWithoutBlock
+Ethash VerifySeal
+Ethash VerifyUncles
+Ethash Finalize
+INFO [06-15|21:15:08] Inserted new block                       number=1027 hash=33d037…50d40f uncles=0 txs=0 gas=0 elapsed=4.219ms
+INFO [06-15|21:15:08] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.297ms   mgasps=0.000 number=1027 hash=33d037…50d40f cache=7.14kB
+BlockChain PostChainEvents ChainEvent
+BlockChain PostChainEvents ChainHeadEvent
+worker update chainHeadCh
+worker commitNewWork
+peerSet PeersWithoutBlock
+worker makeCurrent
+worker commitNewWork self.eth.TxPool().Pending
+worker commitTransactions
+Ethash Finalize
+INFO [06-15|21:15:08] Commit new mining work                   number=1028 txs=0 uncles=0 elapsed=130.926µs
+unconfirmedBlocks Shift
+INFO [06-15|21:15:08] 🔗 block reached canonical chain          number=1022 hash=d7e471…a2e7a0
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+Seal
+worker wait result
+Seal mine
+peer MarkBlock
+Ethash VerifyHeader
+Ethash VerifySeal
+InsertChain
+Ethash VerifyHeaders
+peerSet PeersWithoutBlock
+Ethash VerifySeal
+Ethash VerifyUncles
+Ethash Finalize
+INFO [06-15|21:15:09] Inserted new block                       number=1028 hash=3f06fe…74f410 uncles=0 txs=0 gas=0 elapsed=4.340ms
+INFO [06-15|21:15:09] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.426ms   mgasps=0.000 number=1028 hash=3f06fe…74f410 cache=7.81kB
+BlockChain PostChainEvents ChainEvent
+BlockChain PostChainEvents ChainHeadEvent
+worker update chainHeadCh
+worker commitNewWork
+peerSet PeersWithoutBlock
+worker makeCurrent
+worker commitNewWork self.eth.TxPool().Pending
+worker commitTransactions
+Ethash Finalize
+INFO [06-15|21:15:09] Commit new mining work                   number=1029 txs=0 uncles=0 elapsed=169.398µs
+unconfirmedBlocks Shift
+INFO [06-15|21:15:09] 🔗 block reached canonical chain          number=1023 hash=307797…9430ea
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+Seal
+worker wait result
+Seal mine

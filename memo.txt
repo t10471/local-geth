@@ -1,19 +1,18 @@
 sudo cputhrottle $(pgrep geth) 10
 
 geth --datadir testnet init genesis.json
+geth --datadir testnet2 init genesis.json
 
-.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 123 --nodiscover --maxpeers 0 --datadir testnet --gasprice 1 console --rpc --rpcapi "eth,net,web3,personal"
-
-personal.newAccount()
+~/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 123 --nodiscover --maxpeers 0 --datadir testnet --gasprice 1 console --rpc --rpcapi "eth,net,web3,personal"
 
 
-/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 123 --nodiscover --maxpeers 0 --datadir testnet --gasprice 1 --mine --minerthreads 1 --rpc --rpcapi "eth,net,web3,personal"
+~/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 123 --nodiscover --maxpeers 0 --datadir testnet --gasprice 1 --mine --minerthreads 1 --rpc --rpcapi "eth,net,web3,personal"
 
 
 geth attach ipc:testnet/geth.ipc
 
-personal.unlockAccount(eth.accounts[0])
-personal.unlockAccount(eth.accounts[1])
+personal.unlockAccount(eth.accounts[0], '', 0)
+personal.unlockAccount(eth.accounts[1], '', 0)
 
 
 POAの起動
@@ -22,4 +21,21 @@ puppeth --network poa
 geth --datadir poa init poa.json
 geth --datadir poa --port 3000
 geth attach ipc:poa/geth.ipc
+
+
+
+localで2ノード立ち上げる
+
+mkdir testnet
+mkdir testnet2
+geth --datadir testnet init genesis.json
+geth --datadir testnet2 init genesis.json
+
+~/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 12 --port 30301 --rpcport 8545 --rpc  --datadir testnet --gasprice 1 console --rpc --rpcapi "eth,net,web3,personal" console
+~/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 12 --port 30302 --rpcport 8546 --rpc  --datadir testnet2 --gasprice 1 console --rpc --rpcapi "eth,net,web3,personal" console
+
+peerに相手を追加する
+admin.nodeInfo.enode
+admin.addPeer("enode://b1b2dafe8dd884993e497f8e9047ec8c07f568505c1deaabec0b8142fc6697e0bd47c171d42773e66790843c9ab4697250e8d4db8f1c63a42c8584d432d51fc4@[::]:30301")
+net.peerCount
 
