@@ -1,252 +1,505 @@
-INFO [06-15|21:13:05] Commit new mining work                   number=1021 txs=0 uncles=0 elapsed=200.58µs
-unconfirmedBlocks Shift
-worker push
-worker agent *miner.CpuAgent
-worker agent *miner.RemoteAgent
-worker updateSnapshot
-Seal
-Seal mine
-INFO [06-15|21:13:31] Submitted transaction                    fullhash=0xb1fca5d6346e23954cdc71f91ee930c3e88dfc59fdc1f47240a74eac9af8addd recipient=0x11A725282EE227fF2dDe2fD11055Cbe8F5961E39
-peerSet PeersWithoutTx
-worker update txsCh
-peer AsyncSendTransactions
-peer broadcast queuedTxs
-peer SendTransactions
-protoRW WriteMsg msg #2 (169 bytes)
-rlpx WriteMsg msg #18 (169 bytes)
-rlpxFrameRW WriteMsg msg #18 (169 bytes)
-Seal found
-Seal End
-INFO [06-15|21:13:35] Successfully sealed new block            number=1021 hash=4c2f0a…182c4b
-worker wait result
-BlockChain PostChainEvents ChainEvent
-peerSet PeersWithoutBlock
-peer AsyncSendNewBlock
-BlockChain PostChainEvents ChainHeadEvent
-unconfirmedBlocks Insert
-unconfirmedBlocks Shift
-worker update chainHeadCh
-worker commitNewWork
-INFO [06-15|21:13:35] 🔨 mined potential block                  number=1021 hash=4c2f0a…182c4b
-peer broadcast queuedProps
-peer SendNewBlock
-peerSet PeersWithoutBlock
+worker commitNewWork making header Number  884
+Ethash Prepare header.Number =  884
 worker makeCurrent
-worker commitNewWork self.eth.TxPool().Pending
 worker commitTransactions
-worker commitTransactions commitTransaction
-Ethash Finalize
-INFO [06-15|21:13:35] Commit new mining work                   number=1022 txs=1 uncles=0 elapsed=432.673µs
-unconfirmedBlocks Shift
+Ethash Finalize header.Number =  884
+INFO [06-22|16:57:06] Commit new mining work                   number=884 txs=0 uncles=0 elapsed=145.757µs
+unconfirmedBlocks Shift height  883
+unconfirmedBlocks Shift set.blocks is nil
 worker push
 worker agent *miner.CpuAgent
 worker agent *miner.RemoteAgent
 worker updateSnapshot
-Seal
+CpuAgent update Seal self.workCh
+Seal block.Number =  884
 Seal mine
 Seal found
-Seal End
-INFO [06-15|21:13:43] Successfully sealed new block            number=1022 hash=d7e471…a2e7a0
-worker wait result
-BlockChain PostChainEvents ChainEvent
-BlockChain PostChainEvents ChainHeadEvent
-peerSet PeersWithoutBlock
-peer AsyncSendNewBlock
-worker update chainHeadCh
-worker commitNewWork
-unconfirmedBlocks Insert
-unconfirmedBlocks Shift
-peerSet PeersWithoutBlock
-peer broadcast queuedProps
-peer SendNewBlock
-INFO [06-15|21:13:43] 🔨 mined potential block                  number=1022 hash=d7e471…a2e7a0
-worker makeCurrent
-worker commitNewWork self.eth.TxPool().Pending
-worker commitTransactions
-Ethash Finalize
-INFO [06-15|21:13:43] Commit new mining work                   number=1023 txs=0 uncles=0 elapsed=232.817µs
-unconfirmedBlocks Shift
-worker push
-worker agent *miner.CpuAgent
-worker agent *miner.RemoteAgent
-worker updateSnapshot
-Seal
-Seal mine
-Seal found
-Seal End
-INFO [06-15|21:13:57] Successfully sealed new block            number=1023 hash=307797…9430ea
-worker wait result
-BlockChain PostChainEvents ChainEvent
-BlockChain PostChainEvents ChainHeadEvent
-peerSet PeersWithoutBlock
-peer AsyncSendNewBlock
-unconfirmedBlocks Insert
-peer broadcast queuedProps
-peer SendNewBlock
-worker update chainHeadCh
-worker commitNewWork
-unconfirmedBlocks Shift
-peerSet PeersWithoutBlock
-INFO [06-15|21:13:57] 🔨 mined potential block                  number=1023 hash=307797…9430ea
-worker makeCurrent
-worker commitNewWork self.eth.TxPool().Pending
-worker commitTransactions
-Ethash Finalize
-INFO [06-15|21:13:57] Commit new mining work                   number=1024 txs=0 uncles=0 elapsed=224.837µs
-unconfirmedBlocks Shift
-worker push
-worker agent *miner.RemoteAgent
-worker agent *miner.CpuAgent
-worker updateSnapshot
-Seal
-Seal mine
-peer MarkBlock
-Ethash VerifyHeader
-Ethash VerifySeal
-InsertChain
-Ethash VerifyHeaders
-peerSet PeersWithoutBlock
-Ethash VerifySeal
-Ethash VerifyUncles
-Ethash VerifySeal
-Ethash Finalize
-INFO [06-15|21:14:16] Inserted new block                       number=1024 hash=4824b8…fe1c9e uncles=1 txs=0 gas=0 elapsed=8.688ms
-INFO [06-15|21:14:16] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=8.774ms   mgasps=0.000 number=1024 hash=4824b8…fe1c9e cache=5.33kB
-BlockChain PostChainEvents ChainEvent
-BlockChain PostChainEvents ChainHeadEvent
-worker update chainHeadCh
-worker commitNewWork
-peerSet PeersWithoutBlock
-worker makeCurrent
-worker commitNewWork self.eth.TxPool().Pending
-worker commitTransactions
-Ethash Finalize
-INFO [06-15|21:14:16] Commit new mining work                   number=1025 txs=0 uncles=0 elapsed=163.465µs
-unconfirmedBlocks Shift
-INFO [06-15|21:14:16] 🔗 block reached canonical chain          number=1019 hash=284b10…fbc1cc
-worker push
-worker agent *miner.CpuAgent
-worker agent *miner.RemoteAgent
-worker updateSnapshot
-Seal
-worker wait result
-Seal mine
-peer MarkBlock
-Ethash VerifyHeader
-Ethash VerifySeal
-InsertChain
-peerSet PeersWithoutBlock
-Ethash VerifyHeaders
-Ethash VerifySeal
-Ethash VerifyUncles
-Ethash Finalize
-INFO [06-15|21:14:44] Inserted new block                       number=1025 hash=ddd413…b9180f uncles=0 txs=0 gas=0 elapsed=4.876ms
-INFO [06-15|21:14:44] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.979ms   mgasps=0.000 number=1025 hash=ddd413…b9180f cache=5.99kB
-BlockChain PostChainEvents ChainEvent
-BlockChain PostChainEvents ChainHeadEvent
-worker update chainHeadCh
-worker commitNewWork
-peerSet PeersWithoutBlock
-worker makeCurrent
-worker commitNewWork self.eth.TxPool().Pending
-worker commitTransactions
-Ethash Finalize
-INFO [06-15|21:14:44] Commit new mining work                   number=1026 txs=0 uncles=0 elapsed=172.381µs
-unconfirmedBlocks Shift
-INFO [06-15|21:14:44] 🔗 block reached canonical chain          number=1020 hash=323ed4…6ce1f6
-worker push
-worker agent *miner.CpuAgent
-worker agent *miner.RemoteAgent
-worker updateSnapshot
-Seal
-Seal mine
-worker wait result
-Seal found
-Seal End
-INFO [06-15|21:14:52] Successfully sealed new block            number=1026 hash=ca8e5c…0d476f
-worker wait result
-BlockChain PostChainEvents ChainEvent
+CpuAgent Seal End
+INFO [06-22|16:57:11] Successfully sealed new block            number=884 hash=9cb3d6…45a059
+worker wait result Block.Number()  884
+BlockChain WriteBlockWithState ptd, localTd, externTd  1687366030 1687366030 1688555529
+BlockChain WriteBlockWithState current  884
+BlockChain WriteBlockWithState header chosen 756 756
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  884
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+unconfirmedBlocks Insert number  884 hash  [156 179 214 240 164 221 161 250 116 118 238 133 175 50 187 82 147 134 166 170 111 61 84 129 198 102 231 107 188 69 160 89]
+unconfirmedBlocks Shift height  884
+unconfirmedBlocks Shift set.blocks is nil
+INFO [06-22|16:57:11] 🔨 mined potential block                  number=884 hash=9cb3d6…45a059
+worker update recieve chainHeadCh
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 884
 peerSet PeersWithoutBlock
 peer AsyncSendNewBlock
 peerSet PeersWithoutBlock
-peer broadcast queuedProps
+worker commitNewWork
+peer broadcast queuedProps execute SendNewBlock block.Number()  884
 peer SendNewBlock
-BlockChain PostChainEvents ChainHeadEvent
-unconfirmedBlocks Insert
-unconfirmedBlocks Shift
-INFO [06-15|21:14:52] 🔗 block reached canonical chain          number=1021 hash=4c2f0a…182c4b
-INFO [06-15|21:14:52] 🔨 mined potential block                  number=1026 hash=ca8e5c…0d476f
-worker update chainHeadCh
-worker commitNewWork
+
+
+worker commitNewWork making header Number  885
+Ethash Prepare header.Number =  885
+TxPool loop chainHeadCh old header  883 new header  884
 worker makeCurrent
-worker commitNewWork self.eth.TxPool().Pending
 worker commitTransactions
-Ethash Finalize
-INFO [06-15|21:14:52] Commit new mining work                   number=1027 txs=0 uncles=0 elapsed=279.611µs
-unconfirmedBlocks Shift
+Ethash Finalize header.Number =  885
+INFO [06-22|16:57:11] Commit new mining work                   number=885 txs=0 uncles=0 elapsed=221.224µs
+unconfirmedBlocks Shift height  884
+unconfirmedBlocks Shift set.blocks is NOT nil count =  1
 worker push
 worker agent *miner.CpuAgent
 worker agent *miner.RemoteAgent
 worker updateSnapshot
-Seal
+CpuAgent update Seal self.workCh
+Seal block.Number =  885
 Seal mine
-peer MarkBlock
-Ethash VerifyHeader
-Ethash VerifySeal
-InsertChain
-Ethash VerifyHeaders
+Seal found
+CpuAgent Seal End
+INFO [06-22|16:57:48] Successfully sealed new block            number=885 hash=ab263b…503ed6
+worker wait result Block.Number()  885
+BlockChain WriteBlockWithState ptd, localTd, externTd  1688555529 1688555529 1689745608
+BlockChain WriteBlockWithState current  885
+BlockChain WriteBlockWithState header chosen 757 757
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  885
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 885
 peerSet PeersWithoutBlock
-Ethash VerifySeal
-Ethash VerifyUncles
-Ethash Finalize
-INFO [06-15|21:15:08] Inserted new block                       number=1027 hash=33d037…50d40f uncles=0 txs=0 gas=0 elapsed=4.219ms
-INFO [06-15|21:15:08] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.297ms   mgasps=0.000 number=1027 hash=33d037…50d40f cache=7.14kB
-BlockChain PostChainEvents ChainEvent
-BlockChain PostChainEvents ChainHeadEvent
-worker update chainHeadCh
+unconfirmedBlocks Insert number  885 hash  [171 38 59 97 93 153 67 168 115 155 13 191 161 152 151 133 242 152 97 20 157 227 170 149 230 65 27 138 18 80 62 214]
+peer AsyncSendNewBlock
+worker update recieve chainHeadCh
 worker commitNewWork
 peerSet PeersWithoutBlock
+
+
+worker commitNewWork making header Number  886
+peer broadcast queuedProps execute SendNewBlock block.Number()  885
+peer SendNewBlock
+TxPool loop chainHeadCh old header  884 new header  885
+unconfirmedBlocks Shift height  885
+unconfirmedBlocks Shift set.blocks is NOT nil count =  1
+Ethash Prepare header.Number =  886
+INFO [06-22|16:57:48] 🔨 mined potential block                  number=885 hash=ab263b…503ed6
 worker makeCurrent
-worker commitNewWork self.eth.TxPool().Pending
 worker commitTransactions
-Ethash Finalize
-INFO [06-15|21:15:08] Commit new mining work                   number=1028 txs=0 uncles=0 elapsed=130.926µs
-unconfirmedBlocks Shift
-INFO [06-15|21:15:08] 🔗 block reached canonical chain          number=1022 hash=d7e471…a2e7a0
+Ethash Finalize header.Number =  886
+INFO [06-22|16:57:48] Commit new mining work                   number=886 txs=0 uncles=0 elapsed=281.886µs
+unconfirmedBlocks Shift height  885
+unconfirmedBlocks Shift set.blocks is NOT nil count =  2
 worker push
 worker agent *miner.CpuAgent
 worker agent *miner.RemoteAgent
 worker updateSnapshot
-Seal
-worker wait result
+CpuAgent update Seal self.workCh
+Seal block.Number =  886
 Seal mine
-peer MarkBlock
-Ethash VerifyHeader
-Ethash VerifySeal
-InsertChain
-Ethash VerifyHeaders
+Seal found
+CpuAgent Seal End
+INFO [06-22|16:58:03] Successfully sealed new block            number=886 hash=4600cd…ff3167
+worker wait result Block.Number()  886
+BlockChain WriteBlockWithState ptd, localTd, externTd  1689745608 1689745608 1690934525
+BlockChain WriteBlockWithState current  886
+BlockChain WriteBlockWithState header chosen 758 758
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  886
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+unconfirmedBlocks Insert number  886 hash  [70 0 205 101 145 5 174 150 81 104 115 132 105 244 178 206 83 22 109 83 242 147 242 70 133 111 213 27 251 255 49 103]
+unconfirmedBlocks Shift height  886
+unconfirmedBlocks Shift set.blocks is NOT nil count =  2
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 886
+INFO [06-22|16:58:03] 🔨 mined potential block                  number=886 hash=4600cd…ff3167
 peerSet PeersWithoutBlock
-Ethash VerifySeal
-Ethash VerifyUncles
-Ethash Finalize
-INFO [06-15|21:15:09] Inserted new block                       number=1028 hash=3f06fe…74f410 uncles=0 txs=0 gas=0 elapsed=4.340ms
-INFO [06-15|21:15:09] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.426ms   mgasps=0.000 number=1028 hash=3f06fe…74f410 cache=7.81kB
-BlockChain PostChainEvents ChainEvent
-BlockChain PostChainEvents ChainHeadEvent
-worker update chainHeadCh
+worker update recieve chainHeadCh
 worker commitNewWork
+TxPool loop chainHeadCh old header  885 new header  886
+peer AsyncSendNewBlock
 peerSet PeersWithoutBlock
+worker commitNewWork making header Number  887
+peer broadcast queuedProps execute SendNewBlock block.Number()  886
+peer SendNewBlock
+Ethash Prepare header.Number =  887
 worker makeCurrent
-worker commitNewWork self.eth.TxPool().Pending
 worker commitTransactions
-Ethash Finalize
-INFO [06-15|21:15:09] Commit new mining work                   number=1029 txs=0 uncles=0 elapsed=169.398µs
-unconfirmedBlocks Shift
-INFO [06-15|21:15:09] 🔗 block reached canonical chain          number=1023 hash=307797…9430ea
+Ethash Finalize header.Number =  887
+INFO [06-22|16:58:03] Commit new mining work                   number=887 txs=0 uncles=0 elapsed=184.753µs
+unconfirmedBlocks Shift height  886
+unconfirmedBlocks Shift set.blocks is NOT nil count =  3
 worker push
 worker agent *miner.CpuAgent
 worker agent *miner.RemoteAgent
 worker updateSnapshot
-Seal
-worker wait result
+CpuAgent update Seal self.workCh
+Seal block.Number =  887
+Seal mine
+peer MarkBlock hash  [132 174 208 127 191 163 102 39 141 76 169 141 50 56 129 148 25 159 136 154 132 191 226 67 133 27 31 99 65 109 183 187]
+Fetcher loop op := <-f.inject
+Fetcher insert
+fetcher validator call VerifyHeader
+Ethash VerifyHeader header
+Ethash VerifySeal header.Number =  887
+fetcher inserter
+BlockChain InsertChain
+BlockChain InsertChain 887
+peerSet PeersWithoutBlock
+Ethash VerifyHeaders header.Number  887
+Ethash VerifySeal header.Number =  887
+Ethash VerifyUncles
+BlockChain InsertChain err is  <nil>
+Ethash Finalize header.Number =  887
+BlockChain WriteBlockWithState ptd, localTd, externTd  1690934525 1690934525 1692123442
+BlockChain WriteBlockWithState current  887
+BlockChain WriteBlockWithState header chosen 759 759
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  887
+INFO [06-22|16:58:12] Inserted new block                       number=887 hash=84aed0…6db7bb uncles=0 txs=0 gas=0 elapsed=6.401ms
+INFO [06-22|16:58:12] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.507ms   mgasps=0.000 number=887 hash=84aed0…6db7bb cache=2.27kB
+BlockChain InsertChain PostChainEvents  core.ChainEvent
+BlockChain InsertChain PostChainEvents  core.ChainHeadEvent
+Fetcher loop hash := <-f.done
+peerSet PeersWithoutBlock
+worker update recieve chainHeadCh
+worker commitNewWork
+TxPool loop chainHeadCh old header  886 new header  887
+worker commitNewWork making header Number  888
+Ethash Prepare header.Number =  888
+worker makeCurrent
+worker commitTransactions
+Ethash Finalize header.Number =  888
+INFO [06-22|16:58:12] Commit new mining work                   number=888 txs=0 uncles=0 elapsed=244.714µs
+unconfirmedBlocks Shift height  887
+unconfirmedBlocks Shift set.blocks is NOT nil count =  3
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+CpuAgent update Seal self.workCh
+Seal block.Number =  888
+Seal mine
+Seal found
+CpuAgent Seal End
+INFO [06-22|16:58:29] Successfully sealed new block            number=888 hash=e785dd…09aeee
+worker wait result Block.Number()  888
+BlockChain WriteBlockWithState ptd, localTd, externTd  1692123442 1692123442 1693312939
+BlockChain WriteBlockWithState current  888
+BlockChain WriteBlockWithState header chosen 760 760
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  888
+worker wait result post NewMinedBlockEvent
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 888
+peerSet PeersWithoutBlock
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+peer AsyncSendNewBlock
+unconfirmedBlocks Insert number  888 hash  [231 133 221 199 31 1 157 202 155 137 169 214 11 142 45 38 111 128 85 178 10 208 208 80 198 86 128 237 40 9 174 238]
+unconfirmedBlocks Shift height  888
+unconfirmedBlocks Shift set.blocks is NOT nil count =  3
+peerSet PeersWithoutBlock
+INFO [06-22|16:58:29] 🔨 mined potential block                  number=888 hash=e785dd…09aeee
+peer broadcast queuedProps execute SendNewBlock block.Number()  888
+peer SendNewBlock
+worker update recieve chainHeadCh
+worker commitNewWork
+TxPool loop chainHeadCh old header  887 new header  888
+worker commitNewWork making header Number  889
+Ethash Prepare header.Number =  889
+worker makeCurrent
+worker commitTransactions
+Ethash Finalize header.Number =  889
+INFO [06-22|16:58:29] Commit new mining work                   number=889 txs=0 uncles=0 elapsed=223.483µs
+unconfirmedBlocks Shift height  888
+unconfirmedBlocks Shift set.blocks is NOT nil count =  4
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+CpuAgent update Seal self.workCh
+Seal block.Number =  889
+Seal mine
+Seal found
+CpuAgent Seal End
+INFO [06-22|16:58:37] Successfully sealed new block            number=889 hash=5be55f…b97dd6
+worker wait result Block.Number()  889
+BlockChain WriteBlockWithState ptd, localTd, externTd  1693312939 1693312939 1694502436
+BlockChain WriteBlockWithState current  889
+BlockChain WriteBlockWithState header chosen 761 761
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  889
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+unconfirmedBlocks Insert number  889 hash  [91 229 95 101 73 101 59 131 247 157 86 7 94 107 227 160 159 99 114 247 104 96 115 161 198 39 121 252 72 185 125 214]
+unconfirmedBlocks Shift height  889
+worker update recieve chainHeadCh
+TxPool loop chainHeadCh old header  888 new header  889
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 889
+peerSet PeersWithoutBlock
+worker commitNewWork
+peer AsyncSendNewBlock
+peerSet PeersWithoutBlock
+worker commitNewWork making header Number  890
+Ethash Prepare header.Number =  890
+peer broadcast queuedProps execute SendNewBlock block.Number()  889
+peer SendNewBlock
+unconfirmedBlocks Shift set.blocks is NOT nil count =  4
+worker makeCurrent
+INFO [06-22|16:58:37] 🔗 block reached canonical chain          number=884 hash=9cb3d6…45a059
+INFO [06-22|16:58:37] 🔨 mined potential block                  number=889 hash=5be55f…b97dd6
+worker commitTransactions
+Ethash Finalize header.Number =  890
+INFO [06-22|16:58:37] Commit new mining work                   number=890 txs=0 uncles=0 elapsed=265.922µs
+unconfirmedBlocks Shift height  889
+unconfirmedBlocks Shift set.blocks is NOT nil count =  4
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+CpuAgent update Seal self.workCh
+Seal block.Number =  890
+Seal mine
+Seal found
+CpuAgent Seal End
+INFO [06-22|16:58:40] Successfully sealed new block            number=890 hash=f24984…2d39b4
+worker wait result Block.Number()  890
+BlockChain WriteBlockWithState ptd, localTd, externTd  1694502436 1694502436 1695692513
+BlockChain WriteBlockWithState current  890
+BlockChain WriteBlockWithState header chosen 762 762
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  890
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+unconfirmedBlocks Insert number  890 hash  [242 73 132 57 25 55 168 250 121 35 61 108 133 48 130 36 65 113 148 190 36 244 148 168 140 205 155 177 69 45 57 180]
+unconfirmedBlocks Shift height  890
+unconfirmedBlocks Shift set.blocks is NOT nil count =  4
+INFO [06-22|16:58:40] 🔗 block reached canonical chain          number=885 hash=ab263b…503ed6
+INFO [06-22|16:58:40] 🔨 mined potential block                  number=890 hash=f24984…2d39b4
+TxPool loop chainHeadCh old header  889 new header  890
+worker update recieve chainHeadCh
+worker commitNewWork
+worker commitNewWork making header Number  891
+Ethash Prepare header.Number =  891
+worker makeCurrent
+worker commitTransactions
+Ethash Finalize header.Number =  891
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 890
+peerSet PeersWithoutBlock
+INFO [06-22|16:58:40] Commit new mining work                   number=891 txs=0 uncles=0 elapsed=168.103µs
+unconfirmedBlocks Shift height  890
+unconfirmedBlocks Shift set.blocks is NOT nil count =  4
+worker push
+worker agent *miner.RemoteAgent
+worker agent *miner.CpuAgent
+worker updateSnapshot
+peer AsyncSendNewBlock
+CpuAgent update Seal self.workCh
+peerSet PeersWithoutBlock
+Seal block.Number =  891
+peer broadcast queuedProps execute SendNewBlock block.Number()  890
+peer SendNewBlock
+Seal mine
+Seal found
+CpuAgent Seal End
+INFO [06-22|16:58:41] Successfully sealed new block            number=891 hash=874f14…189c92
+worker wait result Block.Number()  891
+BlockChain WriteBlockWithState ptd, localTd, externTd  1695692513 1695692513 1696883171
+BlockChain WriteBlockWithState current  891
+BlockChain WriteBlockWithState header chosen 763 763
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  891
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+unconfirmedBlocks Insert number  891 hash  [135 79 20 139 121 86 146 27 229 139 232 91 154 24 28 237 193 24 230 190 143 163 169 215 143 80 234 169 10 24 156 146]
+unconfirmedBlocks Shift height  891
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 891
+peerSet PeersWithoutBlock
+TxPool loop chainHeadCh old header  890 new header  891
+unconfirmedBlocks Shift set.blocks is NOT nil count =  4
+peer AsyncSendNewBlock
+worker update recieve chainHeadCh
+INFO [06-22|16:58:41] 🔗 block reached canonical chain          number=886 hash=4600cd…ff3167
+peer broadcast queuedProps execute SendNewBlock block.Number()  891
+peer SendNewBlock
+INFO [06-22|16:58:41] 🔨 mined potential block                  number=891 hash=874f14…189c92
+worker commitNewWork
+peerSet PeersWithoutBlock
+worker commitNewWork making header Number  892
+Ethash Prepare header.Number =  892
+worker makeCurrent
+worker commitTransactions
+Ethash Finalize header.Number =  892
+INFO [06-22|16:58:41] Commit new mining work                   number=892 txs=0 uncles=0 elapsed=180.283µs
+unconfirmedBlocks Shift height  891
+unconfirmedBlocks Shift set.blocks is NOT nil count =  4
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+CpuAgent update Seal self.workCh
+Seal block.Number =  892
+Seal mine
+Seal found
+CpuAgent Seal End
+INFO [06-22|16:59:20] Successfully sealed new block            number=892 hash=e06f79…dacfbd
+worker wait result Block.Number()  892
+BlockChain WriteBlockWithState ptd, localTd, externTd  1696883171 1696883171 1698074410
+BlockChain WriteBlockWithState current  892
+BlockChain WriteBlockWithState header chosen 764 764
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  892
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+unconfirmedBlocks Insert number  892 hash  [224 111 121 84 35 185 193 166 8 206 36 231 14 0 137 38 172 105 48 224 185 203 60 130 18 56 160 73 216 218 207 189]
+unconfirmedBlocks Shift height  892
+unconfirmedBlocks Shift set.blocks is NOT nil count =  4
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 892
+peerSet PeersWithoutBlock
+INFO [06-22|16:59:20] 🔨 mined potential block                  number=892 hash=e06f79…dacfbd
+peer AsyncSendNewBlock
+worker update recieve chainHeadCh
+worker commitNewWork
+peer broadcast queuedProps execute SendNewBlock block.Number()  892
+peer SendNewBlock
+worker commitNewWork making header Number  893
+peerSet PeersWithoutBlock
+Ethash Prepare header.Number =  893
+TxPool loop chainHeadCh old header  891 new header  892
+worker makeCurrent
+worker commitTransactions
+Ethash Finalize header.Number =  893
+INFO [06-22|16:59:20] Commit new mining work                   number=893 txs=0 uncles=0 elapsed=966.538µs
+unconfirmedBlocks Shift height  892
+unconfirmedBlocks Shift set.blocks is NOT nil count =  5
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+CpuAgent update Seal self.workCh
+Seal block.Number =  893
+Seal mine
+Seal found
+CpuAgent Seal End
+INFO [06-22|16:59:30] Successfully sealed new block            number=893 hash=a9c4ed…1f33bb
+worker wait result Block.Number()  893
+BlockChain WriteBlockWithState ptd, localTd, externTd  1698074410 1698074410 1699264487
+BlockChain WriteBlockWithState current  893
+BlockChain WriteBlockWithState header chosen 765 765
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  893
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 893
+peerSet PeersWithoutBlock
+TxPool loop chainHeadCh old header  892 new header  893
+peer AsyncSendNewBlock
+worker update recieve chainHeadCh
+worker commitNewWork
+unconfirmedBlocks Insert number  893 hash  [169 196 237 241 220 245 83 40 46 224 249 70 3 110 105 7 80 189 61 67 53 200 108 125 81 73 219 34 241 31 51 187]
+unconfirmedBlocks Shift height  893
+unconfirmedBlocks Shift set.blocks is NOT nil count =  5
+peerSet PeersWithoutBlock
+peer broadcast queuedProps execute SendNewBlock block.Number()  893
+peer SendNewBlock
+INFO [06-22|16:59:30] 🔗 block reached canonical chain          number=888 hash=e785dd…09aeee
+worker commitNewWork making header Number  894
+Ethash Prepare header.Number =  894
+INFO [06-22|16:59:30] 🔨 mined potential block                  number=893 hash=a9c4ed…1f33bb
+worker makeCurrent
+worker commitTransactions
+Ethash Finalize header.Number =  894
+INFO [06-22|16:59:30] Commit new mining work                   number=894 txs=0 uncles=0 elapsed=193.473µs
+unconfirmedBlocks Shift height  893
+unconfirmedBlocks Shift set.blocks is NOT nil count =  5
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+CpuAgent update Seal self.workCh
+Seal block.Number =  894
+Seal mine
+peer MarkBlock hash  [36 24 129 31 179 95 222 150 173 123 13 232 69 79 239 51 163 180 215 154 98 186 55 51 147 137 162 206 201 24 13 40]
+Fetcher loop op := <-f.inject
+Fetcher insert
+fetcher validator call VerifyHeader
+Ethash VerifyHeader header
+Ethash VerifySeal header.Number =  892
+fetcher inserter
+BlockChain InsertChain
+peerSet PeersWithoutBlock
+BlockChain InsertChain 892
+Ethash VerifyHeaders header.Number  892
+Ethash VerifySeal header.Number =  892
+Ethash VerifyUncles
+BlockChain InsertChain err is  <nil>
+Ethash Finalize header.Number =  892
+BlockChain WriteBlockWithState ptd, localTd, externTd  1696883171 1699264487 1698074410
+BlockChain WriteBlockWithState current  892
+BlockChain WriteBlockWithState header chosen 764 764
+BlockChain WriteBlockWithState reorg 1  false
+INFO [06-22|17:00:02] Inserted forked block                    number=892 hash=241881…180d28 diff=1191239 elapsed=5.472ms   txs=0 gas=0 uncles=0
+INFO [06-22|17:00:02] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.561ms   mgasps=0.000 number=892 hash=241881…180d28 cache=5.46kB
+BlockChain InsertChain PostChainEvents  core.ChainSideEvent
+Fetcher loop hash := <-f.done
+worker update recieve chainSideCh
+peerSet PeersWithoutBlock
+Seal found
+CpuAgent Seal End
+INFO [06-22|17:00:05] Successfully sealed new block            number=894 hash=1c5371…c91bc0
+worker wait result Block.Number()  894
+BlockChain WriteBlockWithState ptd, localTd, externTd  1699264487 1699264487 1700454564
+BlockChain WriteBlockWithState current  894
+BlockChain WriteBlockWithState header chosen 766 766
+BlockChain WriteBlockWithState reorg 1  true
+BlockChain WriteBlockWithState CanonStatTy
+BlockChain insert block number  894
+worker wait result post NewMinedBlockEvent
+worker wait PostChainEvents  core.ChainEvent
+worker wait PostChainEvents  core.ChainHeadEvent
+ProtocolManager minedBroadcastLoop NewMinedBlockEvent recieve Block.Number 894
+peerSet PeersWithoutBlock
+unconfirmedBlocks Insert number  894 hash  [28 83 113 160 127 231 94 71 255 14 167 192 223 241 45 159 235 82 52 104 54 104 133 125 39 80 140 28 193 201 27 192]
+unconfirmedBlocks Shift height  894
+unconfirmedBlocks Shift set.blocks is NOT nil count =  5
+peer AsyncSendNewBlock
+peerSet PeersWithoutBlock
+INFO [06-22|17:00:05] 🔗 block reached canonical chain          number=889 hash=5be55f…b97dd6
+peer broadcast queuedProps execute SendNewBlock block.Number()  894
+peer SendNewBlock
+INFO [06-22|17:00:05] 🔨 mined potential block                  number=894 hash=1c5371…c91bc0
+worker update recieve chainHeadCh
+worker commitNewWork
+TxPool loop chainHeadCh old header  893 new header  894
+worker commitNewWork making header Number  895
+Ethash Prepare header.Number =  895
+worker makeCurrent
+worker commitTransactions
+worker commitUncle
+Ethash Finalize header.Number =  895
+INFO [06-22|17:00:05] Commit new mining work                   number=895 txs=0 uncles=1 elapsed=288.121µs
+unconfirmedBlocks Shift height  894
+unconfirmedBlocks Shift set.blocks is NOT nil count =  5
+worker push
+worker agent *miner.CpuAgent
+worker agent *miner.RemoteAgent
+worker updateSnapshot
+CpuAgent update Seal self.workCh
+Seal block.Number =  895
 Seal mine

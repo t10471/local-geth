@@ -1,15 +1,16 @@
 sudo cputhrottle $(pgrep geth) 10
 
 geth --datadir testnet init genesis.json
-geth --datadir testnet2 init genesis.json
 
 ~/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 123 --nodiscover --maxpeers 0 --datadir testnet --gasprice 1 console --rpc --rpcapi "eth,net,web3,personal"
-
 
 ~/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --networkid 123 --nodiscover --maxpeers 0 --datadir testnet --gasprice 1 --mine --minerthreads 1 --rpc --rpcapi "eth,net,web3,personal"
 
 
 geth attach ipc:testnet/geth.ipc
+
+
+personal.newAccount("")
 
 personal.unlockAccount(eth.accounts[0], '', 0)
 personal.unlockAccount(eth.accounts[1], '', 0)
@@ -36,6 +37,13 @@ geth --datadir testnet2 init genesis.json
 
 peerに相手を追加する
 admin.nodeInfo.enode
-admin.addPeer("enode://b1b2dafe8dd884993e497f8e9047ec8c07f568505c1deaabec0b8142fc6697e0bd47c171d42773e66790843c9ab4697250e8d4db8f1c63a42c8584d432d51fc4@[::]:30301")
+
+admin.addPeer("enode://5d0ae2a77ac9afc5156c9884fc14a3f51ed50ecca2c2bc02f7291bd29126b40ea3dd4e574246c4666b169c3d5b1b845114c25de9644a78c544a1ec3cafda97e6@[::]:30301")
+
 net.peerCount
 
+
+minig
+
+miner.start(1)
+miner.stop()
