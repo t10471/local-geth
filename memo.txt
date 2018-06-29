@@ -47,3 +47,33 @@ minig
 
 miner.start(1)
 miner.stop()
+
+
+PoA
+
+geth account new --datadir poa/node1
+geth account new --datadir poa/node2
+
+cd poa
+
+puppeth --network poa
+
+geth --datadir node1/ init poa.json
+geth --datadir node2/ init poa.json
+
+
+~/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --datadir node1/ --syncmode 'full' --port 30311 --rpc --rpcaddr 'localhost' --rpcport 8545 --rpcapi 'personal,db,eth,net,web3,txpool,miner' --networkid 969 --gasprice '0' --unlock '0xcf85d6ce56741986c8054a48e62b69681a029358' --password node1/password.txt console
+
+~/.gopath/src/github.com/ethereum/go-ethereum/build/bin/geth --datadir node2/ --syncmode 'full' --port 30312 --rpc --rpcaddr 'localhost' --rpcport 8546 --rpcapi 'personal,db,eth,net,web3,txpool,miner'  --networkid 969 --gasprice '0' --unlock '344a9098e0c49b7faa9b0d32d4176497732278ca' --password node2/password.txt console
+
+cf85d6ce56741986c8054a48e62b69681a029358
+344a9098e0c49b7faa9b0d32d4176497732278ca
+
+admin.addPeer("enode://77c04daacf01a6db03ead4788e8f2f1813b38d98474ce7aa62143b3ca27dcc209a8c46dd3e999e8a682f3ae62d38d4ed77b22e0974962ef6a455a256ae6f3be8@[::]:30312")
+
+
+clique.propose('0x75ac71b510713d2bc0f7159b99418b164247a73d', true); clique.propose('0x9a303ac01022d24a21f57163608fdc3c7d668507', true);
+
+
+
+eth.sendTransaction({'from':eth.coinbase, 'to':'0x344a9098e0c49b7faa9b0d32d4176497732278ca', 'value':web3.toWei(3, 'ether')})
